@@ -39,7 +39,7 @@ function Main() {
           negative
           compact
           floating
-          header="Error Connecting to Substrate"
+          header="Error Connecting to Substrate."
           content={`Connection to websocket '${errObj.target.url}' failed.`}
         />
       </Grid.Column>
