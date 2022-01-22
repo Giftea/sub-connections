@@ -1,29 +1,21 @@
 import * as React from 'react';
 
-import UnstyledLink from '@/components/links/UnstyledLink';
+import NextImage from '@/components/NextImage';
 
-const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
-];
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 bg-white'>
+    <header className='sticky bg-light top-0 z-50 bg-white py-5'>
       <div className='layout flex justify-between items-center h-14'>
-        <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
-          Home
-        </UnstyledLink>
+            <NextImage
+              useSkeleton
+              className='w-32 md:w-40'
+              src='/favicon/logo.svg'
+              width='100'
+              height='40'
+              alt='Icon'
+            />
         <nav>
-          <ul className='flex justify-between items-center space-x-4'>
-            {links.map(({ href, label }) => (
-              <li key={`${href}${label}`}>
-                <UnstyledLink href={href} className='hover:text-gray-600'>
-                  {label}
-                </UnstyledLink>
-              </li>
-            ))}
-          </ul>
         </nav>
       </div>
     </header>
