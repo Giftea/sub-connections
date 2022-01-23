@@ -1,34 +1,29 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  eslint: {
-    dirs: ['src'],
-  },
-
-  reactStrictMode: true,
-
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
-
-  // SVGR
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            typescript: true,
-            icon: true,
-          },
-        },
-      ],
-    });
-
-    return config;
-  },
+import { join } from 'path';
+export const eslint = {
+  dirs: ['src'],
 };
+export const images = {
+  path: 'https://sub.id/images/',
+};
+export const sassOptions = {
+  includePaths: [join(__dirname, 'styles')],
+};
+export const reactStrictMode = true;
+export function webpack(config) {
+  config.module.rules.push({
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: [
+      {
+        loader: '@svgr/webpack',
+        options: {
+          typescript: true,
+          icon: true,
+        },
+      },
+    ],
+  });
+
+  return config;
+}

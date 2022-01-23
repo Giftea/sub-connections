@@ -1,0 +1,21 @@
+@import './card.scss';
+@import './stack.scss';
+@import './layout.scss';
+@import './loader.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.main-body {
+  background-color: #f5f5f5;
+  padding: 2rem 2rem;
+  min-height: 100vh;
+  @media screen and (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+}

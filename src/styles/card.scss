@@ -1,0 +1,34 @@
+.storybook-card {
+  background-color: #fff;
+  padding: 1rem 0.8rem;
+  box-shadow: 0 0 5px 2px #eeecec !important;
+  border-radius: 4px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  .chain-icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+  }
+
+  .chain-name {
+    color: #000000d9;
+    margin: 0.3rem 0;
+  }
+
+  .chain-symbol {
+    color: #888;
+    margin: 0;
+  }
+
+  .chain-connection {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    right: 20px;
+    top: 20px;
+  }
+}
