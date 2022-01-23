@@ -77,7 +77,6 @@
   "resolutions": {
     "webpack": "5"
   },
-  "engines": { "node": "14.x" },
   "storybook": "start-storybook -p 6006 -s ./public",
   "build-storybook": "build-storybook -s public",
   "lint-staged": {
