@@ -1,13 +1,29 @@
 {
-  "headers": [
+  "version": 2,
+  "public": true,
+  "name": "mc-examples-starter.vercel.app",
+  "alias": "mc-examples-starter.vercel.app",
+  "regions": ["bru"],
+  "builds": [
     {
-      "source": "/fonts/inter-var-latin.woff2",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*).(js.map|js|css|txt|html|png)",
+      "dest": "/public/$1.$2",
+      "headers": {
+        "cache-control": "s-maxage=31536000,immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
     }
   ]
 }
