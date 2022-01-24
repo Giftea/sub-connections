@@ -10,7 +10,7 @@ const defaultMeta = {
   url: 'sub.id',
   type: 'website',
   robots: 'follow, index',
-  image: '',
+  image: '/favicon/fav.svg',
 };
 
 type SeoProps = {
@@ -47,7 +47,7 @@ export default function Seo(props: SeoProps) {
       <link rel='shortcut icon' type='image/jpg' href='/favicon/fav.svg' />
 
       <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png' />
+      <meta name='msapplication-TileImage' content='/favicon/fav.svg' />
       <meta name='theme-color' content='#ffffff' />
     </Head>
   );
